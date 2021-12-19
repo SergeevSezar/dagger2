@@ -1,10 +1,10 @@
-package com.example.dagger2
+package com.example.dagger2.example1
 
 class Component {
 
     private fun getComputer(): Computer {
         val monitor = Monitor()
-        val keyboard = KeyBoard()
+        val keyboard = Keyboard()
         val mouse = Mouse()
         val computerTower = ComputerTower(
             Storage(),
@@ -14,8 +14,7 @@ class Component {
         return Computer(monitor, computerTower, keyboard, mouse)
     }
 
-    fun inject(activity: MainActivity) {
-        activity.computer = getComputer()
-        activity.keyboard = KeyBoard()
+    fun inject(activity: Activity) {
+        activity.keyboard = Keyboard()
     }
 }
