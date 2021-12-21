@@ -7,7 +7,10 @@ class Activity {
     @Inject
     lateinit var keyboard: Keyboard
 
+    @Inject
+    lateinit var mouse: Mouse
+
     init {
-       Component().inject(this)
+       DaggerNewComponent.create().inject(this)
     }
 }
