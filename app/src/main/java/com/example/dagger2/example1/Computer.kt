@@ -1,7 +1,9 @@
 package com.example.dagger2.example1
 
+import javax.inject.Inject
 
-class Computer (
+
+class Computer @Inject constructor (
     val monitor: Monitor,
     val computerTower: ComputerTower,
     val keyboard: Keyboard,
