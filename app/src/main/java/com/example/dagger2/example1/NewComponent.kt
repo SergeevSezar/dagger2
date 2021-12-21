@@ -6,4 +6,8 @@ import dagger.Component
 interface NewComponent {
 
     fun inject(activity: Activity)
+
+    fun getMouse(): Mouse
+    fun getMonitor(): Monitor
+    fun getKeyboard(): Keyboard
 }
