@@ -1,4 +1,4 @@
-package com.example.dagger2.example_two.presentation
+package com.example.dagger2.example1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

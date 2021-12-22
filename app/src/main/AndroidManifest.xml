@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dagger2">
         <activity
-            android:name=".example_two.presentation.MainActivity"
+            android:name="com.example.dagger2.example1.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
