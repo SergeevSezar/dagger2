@@ -4,19 +4,15 @@ import com.example.dagger2.example2.data.datasource.ExampleLocalDataSource
 import com.example.dagger2.example2.data.datasource.ExampleLocalDataSourceImpl
 import com.example.dagger2.example2.data.datasource.ExampleRemoteDataSource
 import com.example.dagger2.example2.data.datasource.ExampleRemoteDataSourceImpl
+import dagger.Binds
 import dagger.Module
-import dagger.Provides
 
 @Module
-class DataModule {
+interface DataModule {
 
-    @Provides
-    fun providesLocalDataSource(impl: ExampleLocalDataSourceImpl): ExampleLocalDataSource {
-        return impl
-    }
+    @Binds
+    fun bindLocalDataSource(impl: ExampleLocalDataSourceImpl): ExampleLocalDataSource
 
-    @Provides
-    fun providesRemoteDataSource(impl: ExampleRemoteDataSourceImpl): ExampleRemoteDataSource {
-        return impl
-    }
+    @Binds
+    fun bindRemoteDataSource(impl: ExampleRemoteDataSourceImpl): ExampleRemoteDataSource
 }
