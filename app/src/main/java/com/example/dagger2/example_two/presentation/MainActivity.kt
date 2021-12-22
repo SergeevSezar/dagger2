@@ -1,15 +1,19 @@
-package com.example.dagger2.example2.presentation
+package com.example.dagger2.example_two.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.dagger2.R
+import com.example.dagger2.example1.Activity
 
 class MainActivity : AppCompatActivity() {
-    lateinit var viewModel: ExampleViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        viewModel.method()
+
+        val activity = Activity()
+        activity.computer.toString()
+//        activity.mouse.toString()
+//        activity.monitor.toString()
     }
 }
