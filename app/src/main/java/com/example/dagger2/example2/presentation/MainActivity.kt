@@ -3,6 +3,7 @@ package com.example.dagger2.example2.presentation
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.dagger2.R
+import com.example.dagger2.example2.di.ContextModule
 import com.example.dagger2.example2.di.DaggerApplicationComponent
 import com.example.dagger2.example2.di.DataModule
 import javax.inject.Inject
@@ -14,8 +15,9 @@ class MainActivity : AppCompatActivity() {
 
     private val component by lazy {
         DaggerApplicationComponent.builder()
-            .dataModule(DataModule(this))
+            .contextModule(ContextModule(application))
             .build()
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
